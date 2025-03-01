@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      button {
+        margin-left: 50%;
+        margin-top: 15%;
+      }
+      h4,h3{
+        margin-left: 25%;
+      }
+      span{
+        margin-left: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="addDiv()">click me</button>
+    <!-- <button onclick="remove()">remove</button> -->
+
+    <script>
+        let image = document.createElement("img");
+
+
+
+      function addDiv() {
+        let a = document.createElement("div");
+        a.style.border = "red 2px inset";
+        a.style.width = "250px";
+        a.style.borderRadius = "40px 40px 0px 0px";
+        a.style.marginLeft = "25%";
+        a.style.marginTop = "20px";
+        a.style.height = "350px";
+        document.body.appendChild(a);
+
+        let para = document.createElement("p");
+        para.innerHTML = "<h1>Avanthis's</h1> ";
+        // para.style.backgroundColor = "red";
+        para.style.marginLeft = "20%"
+        let para2 = document.createElement("p");
+        para2.innerHTML = "St Thersea Instituate of Engineering <span>& technology<span/>";
+        a.append(para,para2);
+
+        
+        // let image = document.createElement("img");
+        image.setAttribute("src", "./somu.webp"); 
+        image.style.width = "40%";
+        image.style.height = "30%";
+        image.style.marginLeft = "30%";
+        image.style.marginTop = "20%";
+        
+       let p3 = document.createElement("h3") 
+       p3.innerText = "B.Bomeswara rao";
+      //  a.append(image,p3,somu);
+       let somu = document.createElement("h4")
+       somu.innerText = "roll no:20991A0519";
+      //  a.append(image,p3,somu,p4);
+             
+       let p4 = document.createElement("h4") 
+       p4.innerText = "phone:9182195427";
+       a.append(image,p3,somu,p4);
+
+       
+      }
+      // function remove(){
+      //   a.removeChild(image)
+        
+      //  }
+
+    </script>
+  </body>
+</html>
